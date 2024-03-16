@@ -1,17 +1,18 @@
-import cardStack from "./cardstack.js";
+import CardStack from "./cardstack.js";
 
 class Game {
   constructor(cardContainer) {
     // takes argument of the card container div in the index.html file
     this.cardContainer = cardContainer;
-    this.cardStack = { ...cardStack };
-    this.nbOfCards = 4;
+    this.nextButton = document.getElementById("generate-next");
+    this.cardStack = new CardStack();
+    this.nbOfCardsPerTurn = 4;
     this.nbOfTurns = 0;
     // array of four elements to represent the four cards
     this.cardsArray = [];
   }
 
-  generateCombo() {
+  start() {
     if (this.nbOfTurns > 0) {
       this.comboOver();
     }
@@ -26,13 +27,7 @@ class Game {
     this.nbOfTurns++;
   }
 
-  // removes the card div elements when the combo is over
-  comboOver() {
-    this.cardsArray.forEach((card) => {
-      card.remove();
-    });
-    this.cardsArray = [];
-  }
+  generateCombo() {}
 
   // styles the card according to the value
   style(card) {
