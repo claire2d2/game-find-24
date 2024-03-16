@@ -55,6 +55,7 @@ h1 {
   border-width: 0.1rem;
   margin: 1rem;
   text-align: center;
+  background-size: cover;
   /* font-size: 5rem; */
   & div {
     font-size: 5rem;
