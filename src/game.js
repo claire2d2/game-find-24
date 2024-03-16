@@ -45,7 +45,6 @@ class Game {
 
   pickCard(card) {
     const selectedCard = this.cardPile.selectCard();
-    console.log(selectedCard);
     card.style.backgroundImage = `url(${selectedCard.image})`;
     this.cardPile.update(selectedCard);
   }
