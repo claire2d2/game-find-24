@@ -1,15 +1,20 @@
 import cardStack from "./cardstack.js";
 
-class GenerateCombo {
+class Game {
   constructor(cardContainer) {
     // takes argument of the card container div in the index.html file
     this.cardContainer = cardContainer;
+    this.cardStack = { ...cardStack };
     this.nbOfCards = 4;
+    this.nbOfTurns = 0;
     // array of four elements to represent the four cards
     this.cardsArray = [];
   }
 
-  generateCards() {
+  generateCombo() {
+    if (this.nbOfTurns > 0) {
+      this.comboOver();
+    }
     for (let i = 0; i < this.nbOfCards; i++) {
       const newCard = document.createElement("div");
       this.cardContainer.append(newCard);
@@ -18,6 +23,7 @@ class GenerateCombo {
       this.style(newCard);
       this.cardsArray.push(newCard);
     }
+    this.nbOfTurns++;
   }
 
   // removes the card div elements when the combo is over
@@ -54,7 +60,7 @@ class GenerateCombo {
   }
 }
 
-export default GenerateCombo;
+export default Game;
 
 // generate random value between 1 and 10 for each of the four cards
 // make the number appear in the cards
