@@ -10,6 +10,7 @@ class Game {
     this.nbOfTurns = 0;
     // array of four elements to represent the four cards
     this.cardsArray = [];
+    // TODO add infinity mode (no need to through a deck)
   }
 
   start() {
@@ -22,6 +23,10 @@ class Game {
   }
 
   generateCombo() {
+    if (this.cardPile.stack.length === 0) {
+      window.alert("There are no more cards in the pile!");
+      return 0;
+    }
     for (let i = 0; i < this.nbOfCardsPerTurn; i++) {
       const newCard = document.createElement("div");
       this.cardContainer.append(newCard);
@@ -29,7 +34,6 @@ class Game {
       this.pickCard(newCard);
       this.cardsArray.push(newCard);
     }
-    this.nbOfTurns++;
   }
 
   comboOver() {
