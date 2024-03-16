@@ -1,52 +1,25 @@
-const cardStack = {
-  hearts: [
-    { value: 1, image: "../img/ace_of_hearts.png" },
-    { value: 2, image: "../img/2_of_hearts.png" },
-    { value: 3, image: "../img/3_of_hearts.png" },
-    { value: 4, image: "../img/4_of_hearts.png" },
-    { value: 5, image: "../img/5_of_hearts.png" },
-    { value: 6, image: "../img/6_of_hearts.png" },
-    { value: 7, image: "../img/7_of_hearts.png" },
-    { value: 8, image: "../img/8_of_hearts.png" },
-    { value: 9, image: "../img/9_of_hearts.png" },
-    { value: 10, image: "../img/10_of_hearts.png" },
-  ],
-  spades: [
-    { value: 1, image: "../img/ace_of_spades.png" },
-    { value: 2, image: "../img/2_of_spades.png" },
-    { value: 3, image: "../img/3_of_spades.png" },
-    { value: 4, image: "../img/4_of_spades.png" },
-    { value: 5, image: "../img/5_of_spades.png" },
-    { value: 6, image: "../img/6_of_spades.png" },
-    { value: 7, image: "../img/7_of_spades.png" },
-    { value: 8, image: "../img/8_of_spades.png" },
-    { value: 9, image: "../img/9_of_spades.png" },
-    { value: 10, image: "../img/10_of_spades.png" },
-  ],
-  diamonds: [
-    { value: 1, image: "../img/ace_of_diamonds.png" },
-    { value: 2, image: "../img/2_of_diamonds.png" },
-    { value: 3, image: "../img/3_of_diamonds.png" },
-    { value: 4, image: "../img/4_of_diamonds.png" },
-    { value: 5, image: "../img/5_of_diamonds.png" },
-    { value: 6, image: "../img/6_of_diamonds.png" },
-    { value: 7, image: "../img/7_of_diamonds.png" },
-    { value: 8, image: "../img/8_of_diamonds.png" },
-    { value: 9, image: "../img/9_of_diamonds.png" },
-    { value: 10, image: "../img/10_of_diamonds.png" },
-  ],
-  clubs: [
-    { value: 1, image: "../img/ace_of_clubs.png" },
-    { value: 2, image: "../img/2_of_clubs.png" },
-    { value: 3, image: "../img/3_of_clubs.png" },
-    { value: 4, image: "../img/4_of_clubs.png" },
-    { value: 5, image: "../img/5_of_clubs.png" },
-    { value: 6, image: "../img/6_of_clubs.png" },
-    { value: 7, image: "../img/7_of_clubs.png" },
-    { value: 8, image: "../img/8_of_clubs.png" },
-    { value: 9, image: "../img/9_of_clubs.png" },
-    { value: 10, image: "../img/10_of_clubs.png" },
-  ],
-};
+import stack from "./stack.js";
 
-export default cardStack;
+class CardStack {
+  constructor() {
+    this.stack = [...stack];
+    this.playedCards = [];
+    this.stackLen = this.stack.length;
+  }
+
+  selectCard() {
+    const randomIndex = Math.floor(Math.random() * this.stackLen);
+    const selectedCard = this.stack[randomIndex];
+    return selectedCard;
+  }
+  // delete the card out of the stack object once selected
+  update(selectedCard) {
+    for (let i = 0; i < this.stackLen; i++) {
+      if (selectedCard === this.stack[i]) {
+        this.stack.splice(i, 1);
+      }
+    }
+  }
+}
+
+export default CardStack;
