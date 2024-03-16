@@ -1,4 +1,4 @@
-const stack = [
+export const stack = [
   // HEARTS
   { value: 1, image: "../img/ace_of_hearts.png", family: "hearts" },
   { value: 2, image: "../img/2_of_hearts.png", family: "hearts" },
@@ -44,5 +44,3 @@ const stack = [
   { value: 9, image: "../img/9_of_clubs.png", family: "clubs" },
   { value: 10, image: "../img/10_of_clubs.png", family: "clubs" },
 ];
-
-export default stack;
