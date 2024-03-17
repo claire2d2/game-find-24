@@ -29,6 +29,7 @@ class Game {
       return 0;
     }
     for (let i = 0; i < this.nbOfCardsPerTurn; i++) {
+      debugger;
       const newCard = document.createElement("div");
       this.cardContainer.append(newCard);
       newCard.classList.add("card");

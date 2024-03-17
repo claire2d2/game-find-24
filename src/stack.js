@@ -1,15 +1,15 @@
 export const stack = [
   // HEARTS
-  { value: 1, image: "/img/ace_of_hearts.png", family: "hearts" },
-  { value: 2, image: "/img/2_of_hearts.png", family: "hearts" },
-  { value: 3, image: "/img/3_of_hearts.png", family: "hearts" },
-  { value: 4, image: "/img/4_of_hearts.png", family: "hearts" },
-  { value: 5, image: "/img/5_of_hearts.png", family: "hearts" },
-  { value: 6, image: "/img/6_of_hearts.png", family: "hearts" },
-  { value: 7, image: "/img/7_of_hearts.png", family: "hearts" },
-  { value: 8, image: "/img/8_of_hearts.png", family: "hearts" },
-  { value: 9, image: "/img/9_of_hearts.png", family: "hearts" },
-  { value: 10, image: "/img/10_of_hearts.png", family: "hearts" },
+  { value: 1, image: "../img/ace_of_hearts.png", family: "hearts" },
+  { value: 2, image: "../img/2_of_hearts.png", family: "hearts" },
+  { value: 3, image: "../img/3_of_hearts.png", family: "hearts" },
+  { value: 4, image: "../img/4_of_hearts.png", family: "hearts" },
+  { value: 5, image: "../img/5_of_hearts.png", family: "hearts" },
+  { value: 6, image: "../img/6_of_hearts.png", family: "hearts" },
+  { value: 7, image: "../img/7_of_hearts.png", family: "hearts" },
+  { value: 8, image: "../img/8_of_hearts.png", family: "hearts" },
+  { value: 9, image: "../img/9_of_hearts.png", family: "hearts" },
+  { value: 10, image: "../img/10_of_hearts.png", family: "hearts" },
   // SPADES
   { value: 1, image: "../img/ace_of_spades.png", family: "spades" },
   { value: 2, image: "../img/2_of_spades.png", family: "spades" },
@@ -34,7 +34,11 @@ export const stack = [
   { value: 10, image: "../img/10_of_diamonds.png", family: "diamonds" },
   // CLUBS
   { value: 1, image: "../img/ace_of_clubs.png", family: "clubs" },
-  { value: 2, image: "../img/2_of_clubs.png", family: "clubs" },
+  {
+    value: 2,
+    image: "https://claire2d2.github.io/game-find-24/img/2_of_clubs.png",
+    family: "clubs",
+  },
   { value: 3, image: "../img/3_of_clubs.png", family: "clubs" },
   { value: 4, image: "../img/4_of_clubs.png", family: "clubs" },
   { value: 5, image: "../img/5_of_clubs.png", family: "clubs" },
