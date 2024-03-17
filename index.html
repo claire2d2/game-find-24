@@ -11,8 +11,10 @@
   <body>
     <nav>
       <h1>Jeu du 24</h1>
-      <div><button id="rules-button">Rules</button></div>
-      <div>Zen mode</div>
+      <div class="nav-bar-buttons">
+        <button id="rules-button">Rules</button>
+        <button id="zen-mode-button">Zen mode</button>
+      </div>
     </nav>
 
     <!-- TODO If the dialog has already been opened in cache memory, don't show -->
@@ -22,8 +24,10 @@
     <p>Site still under construction!</p>
     <div id="cards-container"></div>
 
-    <button id="start-button">NEW GAME</button>
-    <button id="generate-next">NEXT</button>
+    <div class="button-container">
+      <button id="start-button">NEW GAME</button>
+      <button id="generate-next" hidden>NEXT</button>
+    </div>
 
     <!-- Just to load images for the github page -->
     <div hidden>

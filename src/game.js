@@ -16,6 +16,7 @@ class Game {
 
   start() {
     this.generateCombo();
+    this.nextButton.hidden = false;
 
     this.nextButton.addEventListener("click", () => {
       this.comboOver();

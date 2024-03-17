@@ -16,7 +16,7 @@ button {
   border: none;
   outline: none;
   box-shadow: none;
-  font-size: 3rem;
+  font-size: 1rem;
 }
 
 /* STYLING */
@@ -29,6 +29,10 @@ nav {
   background-color: orange;
 }
 
+.nav-bar-buttons button {
+  color: white;
+}
+
 h1 {
   font-size: 2rem;
   width: 70%;
@@ -36,7 +40,16 @@ h1 {
   color: white;
 }
 
-#start-button {
+.button-container {
+  display: block;
+  margin: 1rem auto;
+  width: 100%;
+  height: 3rem;
+  text-align: center;
+}
+
+#start-button,
+#generate-next {
   margin: 0 auto;
   color: white;
   width: 30rem;
@@ -46,6 +59,10 @@ h1 {
   margin: 0.5rem;
 }
 
+p {
+  font-size: 1.5rem;
+  text-align: center;
+}
 /* RULES */
 
 .rules {
@@ -64,7 +81,6 @@ h1 {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  flex-wrap: true;
 }
 
 .card {
@@ -79,14 +95,29 @@ h1 {
   }
 }
 
-#generate-next {
-  margin: 0 auto;
-  color: white;
-  width: 30rem;
-  font-size: 1.3rem;
-  background-color: orange;
-  padding: 0.5rem;
-  margin: 0.5rem;
+@media (width < 400px) {
+  #cards-container {
+    margin: 0 auto;
+    padding: 1rem auto;
+    height: 20rem;
+    width: 20rem;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    height: 8.5rem;
+    width: 5.5rem;
+    margin: 1rem;
+    text-align: center;
+    background-size: 100% 100%;
+    /* font-size: 5rem; */
+  }
+
+  #generate-next,
+  #start-button {
+    width: 10rem;
+  }
 }
 
 .hidden {
