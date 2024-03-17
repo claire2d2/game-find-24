@@ -3,6 +3,10 @@
   margin: 0;
 }
 
+html {
+  width: 100%;
+}
+
 body {
   font-size: 1.2vw;
   font-family: Arial, Helvetica, sans-serif;
@@ -23,6 +27,7 @@ button {
 
 nav {
   display: flex;
+  width: 100%;
   flex-direction: row;
   justify-content: space-between;
   padding: 0.5rem 2rem;
@@ -35,7 +40,7 @@ nav {
 
 h1 {
   font-size: 2rem;
-  width: 70%;
+  width: 50%;
   text-align: center;
   color: white;
 }
@@ -52,7 +57,7 @@ h1 {
 #generate-next {
   margin: 0 auto;
   color: white;
-  width: 30rem;
+  width: 50%;
   font-size: 1.3rem;
   background-color: orange;
   padding: 0.5rem;
@@ -73,9 +78,8 @@ p {
 
 #cards-container {
   margin: 0 auto;
-  padding: 1rem auto;
   height: 20rem;
-  width: 40rem;
+  width: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -100,14 +104,13 @@ p {
     margin: 0 auto;
     padding: 1rem auto;
     height: 20rem;
-    width: 20rem;
     box-sizing: border-box;
     flex-wrap: wrap;
   }
 
   .card {
-    height: 8.5rem;
-    width: 5.5rem;
+    height: 7rem;
+    width: 3rem;
     margin: 1rem;
     text-align: center;
     background-size: 100% 100%;
@@ -116,7 +119,7 @@ p {
 
   #generate-next,
   #start-button {
-    width: 10rem;
+    width: 50%;
   }
 }
 
