@@ -1,9 +1,10 @@
 import CardStack from "./cardstack.js";
 
 class Game {
-  constructor(cardContainer) {
+  constructor(cardContainer, infinityMode) {
     // takes argument of the card container div in the index.html file
     this.cardContainer = cardContainer;
+    this.infinityMode = infinityMode;
     this.nextButton = document.getElementById("generate-next");
     this.cardPile = new CardStack();
     this.nbOfCardsPerTurn = 4;
